@@ -1,50 +1,42 @@
-<!DOCTYPE html> 
-<html>
+
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>Assignment 2.4 - Portfolio</title>
-    <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FrameFinder</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Assignment 2.4 project</h1>
-        <nav>
-            <a href="#about">About</a> . 
-            <a href="#projects">Projects</a> . 
-            <a href="#contact">Contact</a>
-        </nav> 
-    </header>
+  <header>
+    <h1>FrameFinder</h1>
+    <p>Find images that inspire you.</p>
+  </header>
 
-    <main>
-        <section id="about">
-            <h2>About</h2>
-            <p>First-year Squad 187 CS student who loves building for the web.</p>
-        </section>
+  <main>
+    <form id="search-form">
+      <label for="search-input" class="sr-only">Search Images</label>
+      <input
+        type="search"
+        id="search-input"
+        placeholder="Search images..."
+      >
+      <button type="submit" id="search-button">Search</button>
+    </form>
 
-        <section id="projects">
-            <h2>Projects</h2>
-            <div class="grid">
-                <article class="card">
-                    <h3>Weather App</h3>
-                    <p>Live forecasts.</p>
-                    <a href="#">View</a>
-                </article>
-                <article class="card">
-                    <h3>Quiz Game</h3>
-                    <p>Timed trivia.</p>
-                    <a href="#">View</a>
-                </article>
-                <article class="card">
-                    <h3>To-Do List</h3>
-                    <p>Track tasks.</p>
-                    <a href="#">View</a>
-                </article>
-            </div>
-        </section>
-    </main>
+    <div class="categories">
+      <button type="button">Nature</button>
+      <button type="button">Animals</button>
+      <button type="button">Travel</button>
+    </div>
 
-    <footer id="contact">
-        <h2>Contact</h2>
-        <p>aarav@example.com . <a href="#">GitHub</a> . <a href="#">LinkedIn</a></p>
-    </footer>
+    <p id="status">0 images found</p>
+
+    <section id="results" aria-label="Image search results">
+      <p class="empty-message">Search for something to get started.</p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
 </body>
 </html>
